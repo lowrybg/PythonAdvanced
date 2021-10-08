@@ -9,7 +9,7 @@ test_input_two = """1 7 8 2 5 4 7 8 9 6 3 2 5 4 6
 
 """
 
-# sys.stdin = StringIO(test_input_one)
+sys.stdin = StringIO(test_input_one)
 # sys.stdin = StringIO(test_input_two)
 
 boxes = input().split()
