@@ -11,6 +11,7 @@ with open("text.txt", "r") as file:
                 letters += 1
             elif ch in puncs:
                 punct += 1
+
         output = open("output.txt", "a")
         output.write(f'Line {counter}: {l[:-1]} ({letters}) ({punct})\n')
         output.close()
