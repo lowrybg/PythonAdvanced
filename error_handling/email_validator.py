@@ -1,6 +1,7 @@
 from error_handling.my_exceptions import NameTooShortError, MustContainAtSymbolError, InvalidDomainError
 
 VALID_DOMAINS = ("com", "bg", "org", "net")
+
 email = input()
 
 
