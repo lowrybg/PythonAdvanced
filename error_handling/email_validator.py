@@ -5,9 +5,9 @@ VALID_DOMAINS = ("com", "bg", "org", "net")
 email = input()
 
 
-def valid_email(email):
+def valid_email(mail):
     try:
-        name, domain = email.split('@')
+        name, domain = mail.split('@')
     except ValueError:
         raise MustContainAtSymbolError("Email must contain @")
 
