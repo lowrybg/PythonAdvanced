@@ -27,6 +27,6 @@ while line != "End":
     try:
         del numbers_dictionary[searched]
     except KeyError:
-        print("Number does not exist in dictionary" )
+        print("Number does not exist in dictionary")
     line = input()
 print(numbers_dictionary)
