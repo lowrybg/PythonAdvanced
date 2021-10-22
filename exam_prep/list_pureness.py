@@ -4,19 +4,19 @@ from collections import deque
 def best_list_pureness(*args):
     my_deq = deque(args[0])
     k = args[1]
-    my_dict = {}
-    for _ in range(k):
+    result = 0
+    rotations = 0
+    for _ in range(k+1):
         temp_res = 0
 
         for n in range(len(my_deq)):
             temp_res += my_deq[n] * n
             if n == len(my_deq) - 1:
                 my_deq.appendleft(my_deq.pop())
-                my_dict.update({temp_res: k-1})
-    maxi = max(my_dict.keys())
-    for k, v in my_dict.items():
-        if k == maxi:
-            return f"Best pureness {k} after {v} rotations"
+            if result < temp_res:
+                result = temp_res
+                rotations += 1
+    return f"Best pureness {k} after {rotations} rotations"
 
 
 # test = ([4, 3, 2, 6], 4)
